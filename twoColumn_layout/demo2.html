@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float+margin属性配合使用</title>
+    <style>
+        #left,
+        #right {
+            height: 300px
+        }
+
+        #left {
+            width: 300px;
+            background-color: #c9394a;
+            /* 当前元素脱离文档流 */
+            float: left;
+        }
+
+        /* 自适应 */
+        #right-fix{
+            /* 解决了一个浮动一个不浮动的问题 */
+            background-color: pink;
+            float: right;
+        }
+
+        #right {
+            background-color: #cccccc;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="left">左：定宽</div>
+        <div id="right-fix">
+            <div id="right">右：自适应</div>
+        </div>
+    </div>
+</body>
+
+</html>
