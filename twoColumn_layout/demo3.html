@@ -16,27 +16,11 @@
             background-color: #c9394a;
             /* 当前元素脱离文档流 */
             float: left;
-            /* 设置显示层级更高 */
-            position: relative;
         }
-
-        /* 自适应 */
-        #right-fix{
-            /* 解决了一个浮动一个不浮动的问题 */
-            background-color: pink;
-            float: right;
-            width: 100%;
-            margin-left: -400px;
-        }
-
         #right {
             background-color: #cccccc;
-        }
-
-        #inner{
-            background-color: green;
-            height: 300px;
-            clear: both;
+            /* 开启BFC模式 */
+            overflow: hidden;
         }
     </style>
 </head>
@@ -44,10 +28,7 @@
 <body>
     <div id="parent">
         <div id="left">左：定宽</div>
-        <div id="right-fix">
             <div id="right">
-                <div id="inner"></div>
-            </div>
         </div>
     </div>
 </body>

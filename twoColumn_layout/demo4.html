@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float+margin属性配合使用</title>
+    <style>
+        #parent{
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        #left,
+        #right {
+            height: 300px;
+
+            display:table-cell;
+        }
+
+        #left {
+            width: 300px;
+            background-color: #c9394a;
+        }
+
+        #right {
+            background-color: #cccccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="left">左：定宽</div>
+        <div id="right">
+        </div>
+    </div>
+</body>
+
+</html>
