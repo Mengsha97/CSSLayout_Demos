@@ -7,7 +7,7 @@
     <title>float+margin属性配合使用</title>
     <style>
         #parent{
-            /* 高度坍塌 */
+            /* 解决高度坍塌 */
             height: 300px;
             margin-left: 400px;
             margin-right: 400px;
@@ -27,22 +27,33 @@
 
         #left {
             background-color: #c9394a;
+            /* 将当前元素从当前行移动到上一行同一位置 */
+            margin-left: -100%;
+
+            position: relative;
+            /* 将当前元素移动理想位置 */
+            left: -400px;
         }
 
         #center {
+            /* 为父级元素宽度的百分之百 */
+            width: 100%;
             background-color: green;
         }
 
         #right {
             background-color: #cccccc;
+            margin-left: -400px;
+            position: relative;
+            right: -400px;
         }
     </style>
 </head>
 
 <body>
     <div id="parent">
-        <div id="left"></div>
         <div id="center"></div>
+        <div id="left"></div>
         <div id="right"></div>
     </div>
 </body>
